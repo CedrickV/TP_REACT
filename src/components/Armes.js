@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "./Card";
-//
+import { useSelector, useDispatch } from "react-redux";
 
 const Armes = () => {
   const [data, setData] = useState([]);
-  const [rangeValue, setRangeValue] = useState(5);
+  const rangeValue = useSelector((state) => state.rangeValue);
 
   // Le useEffect se joue lorsque le composant est monté
   useEffect(() => {
@@ -16,7 +16,7 @@ const Armes = () => {
 
   return (
     <div className="armes">
-      <h1>Les armes d'Elden rinG</h1>
+      <h1>Elden rinG WeaponS</h1>
       {/* input de type barre machin */}
       <ul className="radio-container">
         <input
@@ -25,7 +25,9 @@ const Armes = () => {
           max="100"
           defaultValue={rangeValue}
           //Attribue la valeur de l'input à rangeValue
-          onChange={(e) => setRangeValue(e.target.value)}
+          onChange={(e) =>
+            dispatch({ type: "UPDATE_RANGE", payload: e.target.value })
+          }
         />
       </ul>
 
