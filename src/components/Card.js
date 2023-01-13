@@ -29,7 +29,7 @@ const Card = ({ arme, handleClick }) => {
           <div className="type">DEFENCE</div>
         </div>
         <div className="stat">
-          <div className="value">{arme.category}</div>
+          <div className="value"> {arme.category}</div>
           <div className="type">CATEGORY</div>
         </div>
       </div>
