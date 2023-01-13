@@ -1,8 +1,16 @@
 import React from "react";
 
-const Card = ({ arme }) => {
+// import { useHistory } from "react-router-dom";
+
+const Card = ({ arme, handleClick }) => {
+  // const history = useHistory();
+
+  // const handleCardClick = () => {
+  //   history.push(`/weapons/${arme.id}`);
+  // };
+
   return (
-    <div className="card">
+    <div className="card" onClick={handleClick}>
       <div className="card-image">
         <img src={arme.image} alt={arme.name} />
       </div>

@@ -24,10 +24,13 @@ $white: rgb(243, 243, 243);
 body
 {
   font-family: $font-1;
+  
   color : white;
   // @include verticalCenter;
     background-color: rgb(65, 65, 65);
+    
 }
+
 li {
   list-style-type: none;
 }
